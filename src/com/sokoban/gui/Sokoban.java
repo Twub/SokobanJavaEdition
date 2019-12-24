@@ -1,5 +1,6 @@
 package com.sokoban.gui;
 
+import com.sokoban.gui.menu.Header;
 import com.sokoban.utility.PaintUtility;
 
 import javax.swing.*;
@@ -12,9 +13,15 @@ public class Sokoban extends JPanel implements ActionListener {
     private static Sokoban instance = null;
     private static Image backgroundImage = new ImageIcon("res/background.jpg").getImage();
     private Timer updater;
+    private Header menu = Header.getInstance();
 
     private Sokoban(){
+        setLayout(null);
         updater = new Timer(15, this);
+
+        // HEADER SETUP
+        menu.setBounds(1280/2-300/2, 0, 300, 40);
+        add(menu);
     }
 
     @Override

@@ -8,4 +8,9 @@ public class ComponentFactory {
         Button button = new Button(title, pos, width, height);
         return button;
     }
+
+    public static Box createBox(Point pos, int width, int height){
+        Box box = new Box(pos, width, height);
+        return box;
+    }
 }

@@ -13,4 +13,20 @@ public abstract class Component {
         this.width = width;
         this.height = height;
     }
+
+    public int getX(){
+        return position.x;
+    }
+
+    public int getY(){
+        return position.y;
+    }
+
+    public int getWidth(){
+        return width;
+    }
+
+    public int getHeight(){
+        return height;
+    }
 }

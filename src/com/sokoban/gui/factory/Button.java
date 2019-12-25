@@ -1,12 +1,16 @@
 package com.sokoban.gui.factory;
 
+import com.sokoban.utility.RoundedBorder;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.geom.Ellipse2D;
+import java.awt.image.BufferedImage;
 
 public class Button extends Component{
 
     private StyledBtn button;
+
 
     public Button(String title, Point pos, int width, int height){
         super(pos, width, height);
@@ -23,14 +27,16 @@ public class Button extends Component{
             setText(title);
             setBounds(Button.this.getX(), Button.this.getY(), Button.this.getWidth(), Button.this.getHeight());
 
-            setBackground(new Color(153,204,255));
+            setOpaque(false);
+
+            setBackground(new Color(255, 0, 128));
             setFont(new Font("Times New Roman", Font.BOLD, 18));
             addMouseListener(new java.awt.event.MouseAdapter(){
                 public void mouseEntered(java.awt.event.MouseEvent evt){
                     setBackground(new Color(255,204,229));
                 }
                 public void mouseExited(java.awt.event.MouseEvent evt){
-                    setBackground(new Color(153,204,255));
+                    setBackground(new Color(255, 0, 128));
                 }
             });
         }
